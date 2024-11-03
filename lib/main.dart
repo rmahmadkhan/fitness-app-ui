@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'utils/routes.dart';
 import 'utils/theme/app_theme.dart';
-import 'views/home/home_screen.dart';
+import 'views/welcome/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fitness App',
       theme: AppTheme.light,
-      home: const HomeScreen(),
+      initialRoute: WelcomeScreen.routeName,
+      routes: routes,
     );
   }
 }
