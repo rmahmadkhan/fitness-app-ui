@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'utils/routes.dart';
-import 'utils/theme/app_theme.dart';
+import 'all_utils.dart';
 import 'views/welcome/welcome_screen.dart';
 
 void main() {
