@@ -13,6 +13,8 @@ abstract class AppSizes {
   static const double fontSizeSm = 14.0;
   static const double fontSizeMd = 16.0;
   static const double fontSizeLg = 18.0;
+  static const double fontSizeTitle = 20.0;
+  static const double fontSizeHeading = 24.0;
 
   // Input field sizes
   static const double inputFieldRadius = 12.0;

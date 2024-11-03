@@ -12,8 +12,7 @@ abstract class AppColors {
   static const Color backgroundDark = primary;
 
   static const Color textPrimary = primary;
-  static final Color textSecondary =
-      Color(0x19212680); // primary.withOpacity(0.5);
+  static final Color textSecondary = primary.withOpacity(0.5);
 
   static const Color purple = Color(0xFFA48AED);
   static const Color purpleLight = Color(0xFFEAECFF);
