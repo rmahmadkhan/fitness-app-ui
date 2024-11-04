@@ -1,5 +1,6 @@
 import '../../../../all_utils.dart';
 import '../../../../models/workout_model.dart';
+import '../../../workout/workout_screen.dart';
 import 'components/challenge_list_view.dart';
 import 'components/see_more_workout_card.dart';
 import 'components/workout_grid_view.dart';
@@ -15,7 +16,9 @@ class ExplorePage extends StatelessWidget {
         children: [
           SeeMoreWorkoutCard(
             workout: WorkoutModel.quarantineWorkout,
-            onSeeMore: () {},
+            onSeeMore: () {
+              Navigator.pushNamed(context, WorkoutScreen.routeName);
+            },
           ),
           const VerticalSpace(24),
           WorkoutGridView(

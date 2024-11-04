@@ -4,7 +4,7 @@ import 'enums/difficulty_level.dart';
 class WorkoutModel {
   final String name;
   final int kcal;
-  final int minutes;
+  final double minutes;
   final String imagePath;
   final DifficultyLevel difficulty;
 

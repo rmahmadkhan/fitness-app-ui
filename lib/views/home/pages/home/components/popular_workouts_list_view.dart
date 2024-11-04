@@ -1,3 +1,5 @@
+import 'package:fitness_app_ui/views/workout/workout_screen.dart';
+
 import '../../../../../all_utils.dart';
 import '../../../../../models/workout_model.dart';
 import '../../../components/section_title.dart';
@@ -21,7 +23,9 @@ class PopularWorkoutsListView extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => PopularWorkout(
               workout: WorkoutModel.mockData[index],
-              onPlay: () {},
+              onPlay: () {
+                Navigator.pushNamed(context, WorkoutScreen.routeName);
+              },
             ),
             separatorBuilder: (context, index) => const HorizontalSpace(20),
           ),
