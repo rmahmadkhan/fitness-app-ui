@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:provider/provider.dart';
 
 import '../../../all_utils.dart';
@@ -15,86 +15,40 @@ class BottomNavBar extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(32),
-            child: BottomNavigationBar(
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
-              unselectedItemColor: AppColors.white,
-              selectedItemColor: AppColors.primary,
-              type: BottomNavigationBarType.fixed,
+            child: GNav(
+              gap: 5,
+              color: AppColors.white,
+              activeColor: AppColors.primary,
+              tabBackgroundColor: AppColors.accent,
               backgroundColor: AppColors.primary,
-              items: [
-                BottomNavigationBarItem(
-                  activeIcon: _ActiveIcon(
-                    icon: Icons.home_filled,
-                    label: 'Home',
-                  ),
-                  icon: const Icon(Icons.home_filled),
-                  label: 'Home',
+              tabBorderRadius: 32,
+              style: GnavStyle.google,
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 14),
+              tabMargin: const EdgeInsets.all(14),
+              selectedIndex: navBarProvider.selectedIndex,
+              onTabChange: navBarProvider.updateSelectedIndex,
+              tabs: [
+                GButton(
+                  icon: Icons.home_filled,
+                  text: 'Home',
                 ),
-                BottomNavigationBarItem(
-                  activeIcon: _ActiveIcon(
-                    icon: Icons.rocket_launch_outlined,
-                    label: 'Explore',
-                  ),
-                  icon: const Icon(Icons.rocket_launch_outlined),
-                  label: 'Explore',
+                GButton(
+                  icon: Icons.rocket_launch_outlined,
+                  text: 'Explore',
                 ),
-                BottomNavigationBarItem(
-                  activeIcon: _ActiveIcon(
-                    icon: Icons.insert_chart_outlined,
-                    label: 'Insights',
-                  ),
-                  icon: const Icon(Icons.insert_chart_outlined),
-                  label: 'Insights',
+                GButton(
+                  icon: Icons.insert_chart_outlined,
+                  text: 'Insights',
                 ),
-                BottomNavigationBarItem(
-                  activeIcon: _ActiveIcon(
-                    icon: Icons.person_2_outlined,
-                    label: 'Profile',
-                  ),
-                  icon: const Icon(Icons.person_2_outlined),
-                  label: 'Profile',
-                ),
+                GButton(
+                  icon: Icons.person_outline,
+                  text: 'Profile',
+                )
               ],
-              currentIndex: navBarProvider.selectedIndex,
-              onTap: navBarProvider.updateSelectedIndex,
             ),
           ),
         );
       },
-    );
-  }
-}
-
-class _ActiveIcon extends StatelessWidget {
-  final IconData icon;
-  final String label;
-
-  const _ActiveIcon({
-    required this.icon,
-    required this.label,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 98.0,
-      height: 36.0,
-      margin: const EdgeInsets.symmetric(horizontal: 6),
-      decoration: BoxDecoration(
-        color: AppColors.accent,
-        borderRadius: BorderRadius.circular(43),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, color: AppColors.primary),
-          Text(
-            label,
-            style: TextStyle(color: AppColors.primary),
-          ),
-        ],
-      ),
     );
   }
 }
