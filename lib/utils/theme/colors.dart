@@ -14,6 +14,8 @@ abstract class AppColors {
   static const Color textPrimary = primary;
   static final Color textSecondary = primary.withOpacity(0.5);
 
+  static const Color greyLight = Color(0xFFF1F1F1);
+
   static const Color purple = Color(0xFFA48AED);
   static const Color purpleLight = Color(0xFFEAECFF);
 

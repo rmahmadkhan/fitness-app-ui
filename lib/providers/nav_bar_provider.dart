@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../views/home/pages/explore_page.dart';
+import '../views/home/pages/explore/explore_page.dart';
 import '../views/home/pages/home/home_page.dart';
 import '../views/home/pages/insights_page.dart';
 import '../views/home/pages/profile_page.dart';
