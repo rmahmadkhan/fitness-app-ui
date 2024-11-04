@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../providers/nav_bar_provider.dart';
+import 'components/bottom_nav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String routeName = '/home';
@@ -7,6 +11,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ChangeNotifierProvider(
+      create: (_) => NavBarProvider(),
+      child: Scaffold(
+        body: Consumer<NavBarProvider>(
+          builder: (context, navBarProvider, child) {
+            return navBarProvider.selectedPage;
+          },
+        ),
+        bottomNavigationBar: SafeArea(
+          child: BottomNavBar(),
+        ),
+      ),
+    );
   }
 }
