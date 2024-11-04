@@ -1,6 +1,5 @@
-import 'package:fitness_app_ui/models/enums/difficulty_level.dart';
-
 import '../all_utils.dart';
+import 'enums/difficulty_level.dart';
 
 class WorkoutModel {
   final String name;

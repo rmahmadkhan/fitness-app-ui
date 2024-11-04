@@ -1,7 +1,6 @@
-import 'package:fitness_app_ui/views/home/pages/explore/components/challenge_list_view.dart';
-
 import '../../../../all_utils.dart';
 import '../../../../models/workout_model.dart';
+import 'components/challenge_list_view.dart';
 import 'components/see_more_workout_card.dart';
 import 'components/workout_grid_view.dart';
 

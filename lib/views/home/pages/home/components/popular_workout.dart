@@ -1,6 +1,5 @@
-import 'package:fitness_app_ui/models/workout_model.dart';
-
 import '../../../../../all_utils.dart';
+import '../../../../../models/workout_model.dart';
 import '../../../../common_widgets/image_with_shadow.dart';
 
 class PopularWorkout extends StatelessWidget {
