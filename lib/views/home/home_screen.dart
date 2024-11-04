@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../all_utils.dart';
 import '../../providers/nav_bar_provider.dart';
 import 'components/bottom_nav_bar.dart';
 
@@ -14,9 +14,12 @@ class HomeScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => NavBarProvider(),
       child: Scaffold(
+        backgroundColor: AppColors.background,
         body: Consumer<NavBarProvider>(
           builder: (context, navBarProvider, child) {
-            return navBarProvider.selectedPage;
+            return SafeArea(
+              child: navBarProvider.selectedPage,
+            );
           },
         ),
         bottomNavigationBar: SafeArea(

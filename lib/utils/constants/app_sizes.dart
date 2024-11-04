@@ -10,6 +10,7 @@ abstract class AppSizes {
   static const double appBarIconSize = 24.0;
 
   // Text sizes
+  static const double fontSizeBody = 12.0;
   static const double fontSizeSm = 14.0;
   static const double fontSizeMd = 16.0;
   static const double fontSizeLg = 18.0;
@@ -21,4 +22,7 @@ abstract class AppSizes {
   static const double inputFieldBorderWidth = 1.0;
 
   static const double dividerThickness = 1.0;
+
+  // Card sizes
+  static const double cardRadiusLg = 23.0;
 }

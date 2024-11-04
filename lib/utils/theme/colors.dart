@@ -27,4 +27,5 @@ abstract class AppColors {
   static const Color blueLight = Color(0xFFD8E6EC);
 
   static const Color white = Colors.white;
+  static const Color black = Colors.black;
 }
