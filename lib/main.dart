@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import 'all_utils.dart';
 import 'views/welcome/welcome_screen.dart';
 
@@ -17,6 +15,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.light,
       initialRoute: WelcomeScreen.routeName,
       routes: routes,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
